@@ -6,12 +6,12 @@ from mock import Mock, patch
 from django.test import TestCase
 
 from rest_framework import viewsets
+from rest_framework.test import APIRequestFactory
 
 from rest_framework_extensions.key_constructor.constructors import (
     KeyConstructor,
 )
 from rest_framework_extensions.utils import get_unique_method_id
-from rest_framework_extensions.test import APIRequestFactory
 
 from tests_app.testutils import (
     override_extensions_api_settings,

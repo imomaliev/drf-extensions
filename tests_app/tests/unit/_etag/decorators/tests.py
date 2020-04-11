@@ -2,13 +2,13 @@ from django.test import TestCase
 from django.utils.http import quote_etag
 
 from rest_framework import views
-from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import SAFE_METHODS
-from rest_framework_extensions.exceptions import PreconditionRequiredException
+from rest_framework.response import Response
+from rest_framework.test import APIRequestFactory
 
+from rest_framework_extensions.exceptions import PreconditionRequiredException
 from rest_framework_extensions.etag.decorators import (etag, api_etag)
-from rest_framework_extensions.test import APIRequestFactory
 from rest_framework_extensions.utils import prepare_header_name
 
 from tests_app.testutils import (
